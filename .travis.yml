@@ -1,0 +1,50 @@
+language: node_js
+node_js: stable
+cache:
+  directories:
+    - node_modules
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+# before_script:
+#   # - npm install -g gulp
+#   - git config user.name "Xlff"
+#   - git config user.email "xiemax09@gmail.com"
+#   - sed -i'' "s~https://github.com/Xlff/Blogs.git~https://${CI}@github.com/Xlff/Blogs.git~" _config.yml
+
+
+script:
+  - hexo clean && hexo g
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $CI
+  local_dir: public
+  on:
+    branch: master
+
+# after_script:
+# # E: Build LifeCycle
+#   # - git clone https://${GH_REF} .deploy_git
+#   # - cd .deploy_git
+#   # - git checkout master
+#   # - mv .deploy_git/.git/ ./public/
+#   # - cd ./public
+#   # - git config user.name "Xlff"
+#   # - git config user.email "xiemax09@gmail.com"
+#   - cd ./public
+#   - git init
+#   - git add .
+#   - git commit -m "Travis CI Auto Builder"
+#   - git push --force --quiet "https://${CI}@${GH_REF}" master:master
+
+# branches:
+#   only:
+#     - source
+# env:
+#  global:
+#    - GH_REF: github.com/Xlff/Xlff.github.io.git
