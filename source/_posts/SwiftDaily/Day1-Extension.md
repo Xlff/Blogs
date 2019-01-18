@@ -1,7 +1,7 @@
 ---
 title: Day1-Extension
 date: 2019-01-18 11:40:22
-tags:
+tags: SwiftDaily
 ---
 
 ```swift

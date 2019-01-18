@@ -1,7 +1,7 @@
 ---
 title: Day2-静态工厂方法
-date: 2019-01-18 11:40:22
-tags:
+date: 2019-01-18 11:42:22
+tags: SwiftDaily
 ---
 
 ```swift
