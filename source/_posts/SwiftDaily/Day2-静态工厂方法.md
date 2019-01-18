@@ -1,5 +1,8 @@
-# Day2-静态工厂方法
-
+---
+title: Day2-静态工厂方法
+date: 2019-01-18 11:40:22
+tags:
+---
 
 ```swift
 extension UILabel {
