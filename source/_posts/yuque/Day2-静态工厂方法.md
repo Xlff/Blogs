@@ -1,7 +1,9 @@
+
 ---
 title: Day2-静态工厂方法
-date: 2019-01-18 11:42:22
-tags: SwiftDaily
+date: 2019-01-16 09:50:11 +0800
+tags: []
+categories: 
 ---
 
 ```swift
@@ -32,4 +34,5 @@ class ContentViewController: UIViewController {
     lazy var detailLabel = UILabel.initForDescription()
 }
 ```
+
 

@@ -1,7 +1,9 @@
+
 ---
 title: Day1-Extension
-date: 2019-01-18 11:40:22
-tags: SwiftDaily
+date: 2019-01-16 09:38:49 +0800
+tags: []
+categories: 
 ---
 
 ```swift
@@ -14,5 +16,6 @@ extension UIView {
 // 向父视图中添加
 view.addSubviews(imageView, slider, view, label)
 ```
+
 
 
