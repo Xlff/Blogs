@@ -1,12 +1,12 @@
 [
   {
-    "title": "自动部署测试2",
-    "description": "0001",
-    "created_at": "2019-01-20T13:25:32.000Z",
-    "updated_at": "2019-01-20T13:35:11.000Z",
-    "published_at": "2019-01-20T13:35:11.000Z",
+    "title": "Day3-UIColor便利方法",
+    "description": "extension UIColor {   \t// 重定义rgb     convenience init(r: Int, g: Int, b: Int, a: CGFloat) {         self.init(red: CGFloat(r) / 255.0, green: CGFlo...",
+    "created_at": "2019-01-22T02:24:24.000Z",
+    "updated_at": "2019-01-22T11:22:29.000Z",
+    "published_at": "2019-01-22T11:22:29.000Z",
     "format": "lake",
-    "slug": "rbsmsv",
+    "slug": "fsade6",
     "last_editor": {
       "id": 241566,
       "type": "User",
@@ -23,33 +23,7 @@
       "updated_at": "2019-01-20T13:21:18.000Z",
       "_serializer": "v2.user"
     },
-    "body": "0001\n"
-  },
-  {
-    "title": "无标题",
-    "description": "",
-    "created_at": "2019-01-20T13:25:20.000Z",
-    "updated_at": "2019-01-20T13:25:20.000Z",
-    "published_at": null,
-    "format": "lake",
-    "slug": "criyce",
-    "last_editor": {
-      "id": 241566,
-      "type": "User",
-      "login": "wizzzard",
-      "name": "WiZzzard",
-      "description": null,
-      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
-      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
-      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
-      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
-      "followers_count": 0,
-      "following_count": 1,
-      "created_at": "2019-01-09T10:08:09.000Z",
-      "updated_at": "2019-01-20T13:21:18.000Z",
-      "_serializer": "v2.user"
-    },
-    "body": ""
+    "body": "\n```swift\nextension UIColor {\n  \t// 重定义rgb\n    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {\n        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue: CGFloat(g) / 255.0, alpha: a)\n    }\n    convenience init(r: Int, g: Int, b: Int) {\n        self.init(r: r, g: g, b: b, a: 1.0)\n    }\n    // 使用十六进制\n    convenience init(hex: Int) {\n        self.init(r: (hex >> 16) & 0xff, g: (hex >> 8) & 0xff, b: hex & 0xff)\n    }\n}\n\nUIColor.init(r: 151, g: 151, b: 151)\nUIColor.init(r: 200, g: 100, b: 199, a: 0.5)\n\nUIColor.init(hex: 0x5fc7dc)\n```\n\n![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)\n"
   },
   {
     "title": "Day2-静态工厂方法",
@@ -102,31 +76,5 @@
       "_serializer": "v2.user"
     },
     "body": "\n```swift\nextension UIView {\n\tfunc addSubviews(_ subviews: UIView...) {\n\t\tsubviews.forEach(addSubView)\n\t}\n}\n\n// 向父视图中添加\nview.addSubviews(imageView, slider, view, label)\n```\n\n\n"
-  },
-  {
-    "title": "Day3: UIColor便利方法",
-    "description": "extension UIColor {   \t// 重定义rgb     convenience init(r: Int, g: Int, b: Int, a: CGFloat) {         self.init(red: CGFloat(r) / 255.0, green: CGFlo...",
-    "created_at": "2019-01-22T02:24:24.000Z",
-    "updated_at": "2019-01-22T02:39:04.000Z",
-    "published_at": "2019-01-22T02:39:04.000Z",
-    "format": "lake",
-    "slug": "fsade6",
-    "last_editor": {
-      "id": 241566,
-      "type": "User",
-      "login": "wizzzard",
-      "name": "WiZzzard",
-      "description": null,
-      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
-      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
-      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
-      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
-      "followers_count": 0,
-      "following_count": 1,
-      "created_at": "2019-01-09T10:08:09.000Z",
-      "updated_at": "2019-01-20T13:21:18.000Z",
-      "_serializer": "v2.user"
-    },
-    "body": "\n```swift\nextension UIColor {\n  \t// 重定义rgb\n    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {\n        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue: CGFloat(g) / 255.0, alpha: a)\n    }\n    convenience init(r: Int, g: Int, b: Int) {\n        self.init(r: r, g: g, b: b, a: 1.0)\n    }\n    // 使用十六进制\n    convenience init(hex: Int) {\n        self.init(r: (hex >> 16) & 0xff, g: (hex >> 8) & 0xff, b: hex & 0xff)\n    }\n}\n\nUIColor.init(r: 151, g: 151, b: 151)\nUIColor.init(r: 200, g: 100, b: 199, a: 0.5)\n\nUIColor.init(hex: 0x5fc7dc)\n```\n\n![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)\n"
   }
 ]
