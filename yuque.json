@@ -76,5 +76,83 @@
       "_serializer": "v2.user"
     },
     "body": "\n```swift\nextension UIView {\n\tfunc addSubviews(_ subviews: UIView...) {\n\t\tsubviews.forEach(addSubView)\n\t}\n}\n\n// 向父视图中添加\nview.addSubviews(imageView, slider, view, label)\n```\n\n\n"
+  },
+  {
+    "title": "Day5-滚动TableView时收起键盘",
+    "description": "// 滚动时不收起 tableView.keyboardDismissMode = .none // 滚动开始就收起 tableView.keyboardDismissMode = .onDrag // 交互型, 可跟随滚动收起或向上滑动取消收起 tableView.keyboardDismi...",
+    "created_at": "2019-01-23T07:20:19.000Z",
+    "updated_at": "2019-01-23T07:28:29.000Z",
+    "published_at": "2019-01-23T07:26:07.000Z",
+    "format": "lake",
+    "slug": "fp5e9a",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "\n```swift\n// 滚动时不收起\ntableView.keyboardDismissMode = .none\n// 滚动开始就收起\ntableView.keyboardDismissMode = .onDrag\n// 交互型, 可跟随滚动收起或向上滑动取消收起\ntableView.keyboardDismissMode = .interactive\n\n```\n\n"
+  },
+  {
+    "title": "Day4-方法的缩写",
+    "description": "let view = UIView() // 设置背景颜色UIColor.white view.backgroundColor = .white // 设置frame时 CGRect.zero view.frame = .zero  let tableView : UITableView? /...",
+    "created_at": "2019-01-23T07:15:03.000Z",
+    "updated_at": "2019-01-23T07:28:29.000Z",
+    "published_at": "2019-01-23T07:20:00.000Z",
+    "format": "lake",
+    "slug": "wmamfo",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "\n```swift\nlet view = UIView()\n// 设置背景颜色UIColor.white\nview.backgroundColor = .white\n// 设置frame时 CGRect.zero\nview.frame = .zero\n\nlet tableView : UITableView?\n// 当我们知道对象的具体类型时,可以缺省类名  如:UITableView\ntableView = .init(frame: .zero, style: .plain)\n```\n\n"
+  },
+  {
+    "title": "无标题",
+    "description": "",
+    "created_at": "2019-01-23T07:14:07.000Z",
+    "updated_at": "2019-01-23T07:28:29.000Z",
+    "published_at": null,
+    "format": "lake",
+    "slug": "dx7wb4",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": ""
   }
 ]
