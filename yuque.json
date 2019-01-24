@@ -154,5 +154,57 @@
       "_serializer": "v2.user"
     },
     "body": ""
+  },
+  {
+    "title": "Day7-筛选 filter",
+    "description": "定义:func filter(includeElement: (T) -&gt; Bool) -&gt; [T]参数是一个条件, 根据Bool值来返回符合条件的元素// 取出大于10 的数 let array = [1, 5, 20, 14, 6, 30, 9, 10] let result ...",
+    "created_at": "2019-01-24T02:13:46.000Z",
+    "updated_at": "2019-01-24T02:23:45.000Z",
+    "published_at": "2019-01-24T02:23:45.000Z",
+    "format": "lake",
+    "slug": "eh4rma",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "定义:\n```swift\nfunc filter(includeElement: (T) -> Bool) -> [T]\n```\n参数是一个条件, 根据Bool值来返回符合条件的元素\n\n```swift\n// 取出大于10 的数\nlet array = [1, 5, 20, 14, 6, 30, 9, 10]\nlet result = array.filter{ $0 > 10}\nprint(result) // [20, 14, 30]\n```\n\n"
+  },
+  {
+    "title": "Day6-UITextContentType",
+    "description": "显示文本输入时期望的语义信息.let textField = UITextField() /// 只能单一设置 默认为nil textField.textContentType = .name",
+    "created_at": "2019-01-23T12:58:41.000Z",
+    "updated_at": "2019-01-24T02:13:28.000Z",
+    "published_at": "2019-01-24T02:13:28.000Z",
+    "format": "lake",
+    "slug": "gwidp9",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "显示文本输入时期望的语义信息.\n\n```swift\nlet textField = UITextField()\n/// 只能单一设置 默认为nil\ntextField.textContentType = .name\n```\n\n"
   }
 ]
