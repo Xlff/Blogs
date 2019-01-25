@@ -206,5 +206,31 @@
       "_serializer": "v2.user"
     },
     "body": "显示文本输入时期望的语义信息.\n\n```swift\nlet textField = UITextField()\n/// 只能单一设置 默认为nil\ntextField.textContentType = .name\n```\n\n"
+  },
+  {
+    "title": "Day8-guard",
+    "description": "guard是一个条件语句,必须条件为真时才继续执行, 否则提前退出函数.1. 验证入口条件func sayHello(numberOfTimes: Int) {   \t// 传入次数大于0时才打印, 否则直接返回.     guard numberOfTimes &gt; 0 else { r...",
+    "created_at": "2019-01-24T09:18:42.000Z",
+    "updated_at": "2019-01-25T01:52:27.000Z",
+    "published_at": "2019-01-25T01:52:27.000Z",
+    "format": "lake",
+    "slug": "purnuk",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 0,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-01-23T07:28:29.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "guard是一个条件语句,必须条件为真时才继续执行, 否则提前退出函数.\n# 1. 验证入口条件\n\n```swift\nfunc sayHello(numberOfTimes: Int) {\n  \t// 传入次数大于0时才打印, 否则直接返回.\n    guard numberOfTimes > 0 else { return }\n    for _ in 1...numberOfTimes {\n        print(\"Hello!\")\n    }\n}\n```\n# 2.对可选值进行解包,代替if let..else\n\n```swift\nlet label: UILabel?\n\nfunc updateLabelText(_ text: String) {\n  guard let label = self.label else { return }\n  label.text = text\n}\n```\n# 3.不要用作if的相反情况\nguard不是通常意义上的分支语义. 它特别强调在不满足期望条件时,提前退出.\n\n# 4.不要在else语句中放入复杂代码\n最好不要多于2-3行代码.\n"
   }
 ]
