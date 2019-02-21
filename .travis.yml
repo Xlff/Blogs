@@ -24,6 +24,7 @@ deploy:
   skip_cleanup: true
   github_token: $CI
   local_dir: public
+  keep-history: true
   on:
     branch: master
 
