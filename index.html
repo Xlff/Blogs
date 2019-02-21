@@ -229,6 +229,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/yuque/Day10-AllSatisfyFunction/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xlff">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夫夫的开发小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/21/yuque/Day10-AllSatisfyFunction/" itemprop="url">Day10-AllSatisfyFunction</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T02:09:17+00:00">
+                2019-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>返回序列中的值是否都满足条件:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">allSatisfy</span><span class="params">(<span class="number">_</span> predicate: <span class="params">(Element)</span></span></span> <span class="keyword">throws</span> -&gt; <span class="type">Bool</span>) <span class="keyword">rethrows</span> -&gt; <span class="type">Bool</span></span><br></pre></td></tr></table></figure></p>
+<p>例子:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"Sofia"</span>, <span class="string">"Camilla"</span>, <span class="string">"Martina"</span>, <span class="string">"Mateo"</span>, <span class="string">"Nicolás"</span>]</span><br><span class="line"><span class="keyword">let</span> allHaveAtLeastFive = names.allSatisfy(&#123; $<span class="number">0</span>.<span class="built_in">count</span> &gt;= <span class="number">5</span> &#125;)</span><br><span class="line"><span class="comment">// allHaveAtLeastFive = true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> numbers = [<span class="number">2</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">19</span>, <span class="number">8</span>]</span><br><span class="line"><span class="keyword">let</span> allNumberLargeThanTen = numbers.allSatisfy(&#123; $<span class="number">0</span> &gt; <span class="number">10</span> &#125;)</span><br><span class="line"><span class="comment">// allNumberLargeThanTen = false</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/yuque/Day9-first条件/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1351,7 +1473,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

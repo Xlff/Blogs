@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="定义:1func filter(includeElement: (T) -&amp;gt; Bool) -&amp;gt; [T] 参数是一个条件, 根据Bool值来返回符合条件的元素 1234// 取出大于10 的数let array = [1, 5, 20, 14, 6, 30, 9, 10]let result = array.filter&amp;#123; $0 &amp;gt; 10&amp;#125;print(resul">
+<meta name="description" content="返回序列中的值是否都满足条件:1public func allSatisfy(_ predicate: (Element) throws -&amp;gt; Bool) rethrows -&amp;gt; Bool 例子: 1234567let names = [&quot;Sofia&quot;, &quot;Camilla&quot;, &quot;Martina&quot;, &quot;Mateo&quot;, &quot;Nicolás&quot;]let allHaveAtLeastFive =">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day7-筛选 filter">
-<meta property="og:url" content="http://yoursite.com/2019/01/24/yuque/Day7-筛选 filter/index.html">
+<meta property="og:title" content="Day10-AllSatisfyFunction">
+<meta property="og:url" content="http://yoursite.com/2019/02/21/yuque/Day10-AllSatisfyFunction/index.html">
 <meta property="og:site_name" content="夫夫的开发小站">
-<meta property="og:description" content="定义:1func filter(includeElement: (T) -&amp;gt; Bool) -&amp;gt; [T] 参数是一个条件, 根据Bool值来返回符合条件的元素 1234// 取出大于10 的数let array = [1, 5, 20, 14, 6, 30, 9, 10]let result = array.filter&amp;#123; $0 &amp;gt; 10&amp;#125;print(resul">
+<meta property="og:description" content="返回序列中的值是否都满足条件:1public func allSatisfy(_ predicate: (Element) throws -&amp;gt; Bool) rethrows -&amp;gt; Bool 例子: 1234567let names = [&quot;Sofia&quot;, &quot;Camilla&quot;, &quot;Martina&quot;, &quot;Mateo&quot;, &quot;Nicolás&quot;]let allHaveAtLeastFive =">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-02-21T02:20:26.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day7-筛选 filter">
-<meta name="twitter:description" content="定义:1func filter(includeElement: (T) -&amp;gt; Bool) -&amp;gt; [T] 参数是一个条件, 根据Bool值来返回符合条件的元素 1234// 取出大于10 的数let array = [1, 5, 20, 14, 6, 30, 9, 10]let result = array.filter&amp;#123; $0 &amp;gt; 10&amp;#125;print(resul">
+<meta name="twitter:title" content="Day10-AllSatisfyFunction">
+<meta name="twitter:description" content="返回序列中的值是否都满足条件:1public func allSatisfy(_ predicate: (Element) throws -&amp;gt; Bool) rethrows -&amp;gt; Bool 例子: 1234567let names = [&quot;Sofia&quot;, &quot;Camilla&quot;, &quot;Martina&quot;, &quot;Mateo&quot;, &quot;Nicolás&quot;]let allHaveAtLeastFive =">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/24/yuque/Day7-筛选 filter/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/21/yuque/Day10-AllSatisfyFunction/">
 
 
 
 
 
-  <title>Day7-筛选 filter | 夫夫的开发小站</title>
+  <title>Day10-AllSatisfyFunction | 夫夫的开发小站</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/24/yuque/Day7-筛选 filter/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/yuque/Day10-AllSatisfyFunction/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xlff">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day7-筛选 filter</h1>
+          <h1 class="post-title" itemprop="name headline">Day10-AllSatisfyFunction</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-24T02:13:46+00:00">
-                2019-01-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T02:09:17+00:00">
+                2019-02-21
               </time>
             
 
@@ -299,9 +299,9 @@
       
 
       
-        <p>定义:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">filter</span><span class="params">(includeElement: <span class="params">(T)</span></span></span> -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">T</span>]</span><br></pre></td></tr></table></figure></p>
-<p>参数是一个条件, 根据Bool值来返回符合条件的元素</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取出大于10 的数</span></span><br><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">20</span>, <span class="number">14</span>, <span class="number">6</span>, <span class="number">30</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line"><span class="keyword">let</span> result = array.<span class="built_in">filter</span>&#123; $<span class="number">0</span> &gt; <span class="number">10</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(result) <span class="comment">// [20, 14, 30]</span></span><br></pre></td></tr></table></figure>
+        <p>返回序列中的值是否都满足条件:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">allSatisfy</span><span class="params">(<span class="number">_</span> predicate: <span class="params">(Element)</span></span></span> <span class="keyword">throws</span> -&gt; <span class="type">Bool</span>) <span class="keyword">rethrows</span> -&gt; <span class="type">Bool</span></span><br></pre></td></tr></table></figure></p>
+<p>例子:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"Sofia"</span>, <span class="string">"Camilla"</span>, <span class="string">"Martina"</span>, <span class="string">"Mateo"</span>, <span class="string">"Nicolás"</span>]</span><br><span class="line"><span class="keyword">let</span> allHaveAtLeastFive = names.allSatisfy(&#123; $<span class="number">0</span>.<span class="built_in">count</span> &gt;= <span class="number">5</span> &#125;)</span><br><span class="line"><span class="comment">// allHaveAtLeastFive = true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> numbers = [<span class="number">2</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">19</span>, <span class="number">8</span>]</span><br><span class="line"><span class="keyword">let</span> allNumberLargeThanTen = numbers.allSatisfy(&#123; $<span class="number">0</span> &gt; <span class="number">10</span> &#125;)</span><br><span class="line"><span class="comment">// allNumberLargeThanTen = false</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -326,8 +326,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/yuque/Day6-UITextContentType/" rel="next" title="Day6-UITextContentType">
-                <i class="fa fa-chevron-left"></i> Day6-UITextContentType
+              <a href="/2019/02/20/yuque/Day9-first条件/" rel="next" title="Day9-first条件">
+                <i class="fa fa-chevron-left"></i> Day9-first条件
               </a>
             
           </div>
@@ -335,10 +335,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/yuque/Day8-guard/" rel="prev" title="Day8-guard">
-                Day8-guard <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
