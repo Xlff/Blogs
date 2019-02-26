@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
+<meta name="description" content="defer用于延迟执行,在函数执行完成后再执行defer中的代码.例子: 123456789func simpleDefer() &amp;#123;    defer &amp;#123;        print(&quot;defer code&quot;)    &amp;#125;       print(&quot;other code&quot;)&amp;#125;simpleDefer()// other code// defer code">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day9-first条件">
-<meta property="og:url" content="http://yoursite.com/2019/02/20/yuque/Day9-first条件/index.html">
+<meta property="og:title" content="Day11-defer介绍">
+<meta property="og:url" content="http://yoursite.com/2019/02/26/yuque/Day11-defer介绍/index.html">
 <meta property="og:site_name" content="夫夫的开发小站">
-<meta property="og:description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
+<meta property="og:description" content="defer用于延迟执行,在函数执行完成后再执行defer中的代码.例子: 123456789func simpleDefer() &amp;#123;    defer &amp;#123;        print(&quot;defer code&quot;)    &amp;#125;       print(&quot;other code&quot;)&amp;#125;simpleDefer()// other code// defer code">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-02-26T07:08:26.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day9-first条件">
-<meta name="twitter:description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
+<meta name="twitter:title" content="Day11-defer介绍">
+<meta name="twitter:description" content="defer用于延迟执行,在函数执行完成后再执行defer中的代码.例子: 123456789func simpleDefer() &amp;#123;    defer &amp;#123;        print(&quot;defer code&quot;)    &amp;#125;       print(&quot;other code&quot;)&amp;#125;simpleDefer()// other code// defer code">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/20/yuque/Day9-first条件/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/26/yuque/Day11-defer介绍/">
 
 
 
 
 
-  <title>Day9-first条件 | 夫夫的开发小站</title>
+  <title>Day11-defer介绍 | 夫夫的开发小站</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/yuque/Day9-first条件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/yuque/Day11-defer介绍/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xlff">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day9-first条件</h1>
+          <h1 class="post-title" itemprop="name headline">Day11-defer介绍</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-20T01:41:08+00:00">
-                2019-02-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-26T06:53:13+00:00">
+                2019-02-26
               </time>
             
 
@@ -299,8 +299,8 @@
       
 
       
-        <h1 id="first-where"><a href="#first-where" class="headerlink" title="first(where:)"></a>first(where:)</h1><p>返回一个满足条件的值<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">first</span><span class="params">(<span class="keyword">where</span> predicate: <span class="params">(Value)</span></span></span> <span class="keyword">throws</span> -&gt; <span class="type">Bool</span>) <span class="keyword">rethrows</span> -&gt; <span class="type">Value</span>?</span><br></pre></td></tr></table></figure></p>
-<p>例子:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, -<span class="number">4</span>, -<span class="number">10</span>, <span class="number">20</span>, <span class="number">19</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> number = numbers.first(<span class="keyword">where</span>: &#123; $<span class="number">0</span> &lt; <span class="number">0</span> &#125;) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"数组中第一个小于0的数: \(number)"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 数组中第一个小于0的数: -4</span></span><br></pre></td></tr></table></figure></p>
+        <p>defer用于延迟执行,在函数执行完成后再执行defer中的代码.<br>例子:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">simpleDefer</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">defer</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"defer code"</span>)</span><br><span class="line">    &#125;   </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"other code"</span>)</span><br><span class="line">&#125;</span><br><span class="line">simpleDefer()</span><br><span class="line"><span class="comment">// other code</span></span><br><span class="line"><span class="comment">// defer code</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -325,8 +325,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/24/yuque/Day8-guard/" rel="next" title="Day8-guard">
-                <i class="fa fa-chevron-left"></i> Day8-guard
+              <a href="/2019/02/21/yuque/Day10-AllSatisfyFunction/" rel="next" title="Day10-AllSatisfyFunction">
+                <i class="fa fa-chevron-left"></i> Day10-AllSatisfyFunction
               </a>
             
           </div>
@@ -334,10 +334,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/21/yuque/Day10-AllSatisfyFunction/" rel="prev" title="Day10-AllSatisfyFunction">
-                Day10-AllSatisfyFunction <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,17 +385,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -441,22 +428,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-where"><span class="nav-number">1.</span> <span class="nav-text">first(where:)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Day9-first条件">
-<meta property="og:url" content="http://yoursite.com/2019/02/20/yuque/Day9-first条件/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="夫夫的开发小站">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="夫夫的开发小站">
-<meta property="og:description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-26T07:08:26.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day9-first条件">
-<meta name="twitter:description" content="first(where:)返回一个满足条件的值1func first(where predicate: (Value) throws -&amp;gt; Bool) rethrows -&amp;gt; Value? 例子:12345let numbers = [2, 5, 8, -4, -10, 20, 19]if let number = numbers.first(where: &amp;#123; $0 &amp;lt;">
+<meta name="twitter:title" content="夫夫的开发小站">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/20/yuque/Day9-first条件/">
+  <link rel="canonical" href="http://yoursite.com/page/2/">
 
 
 
 
 
-  <title>Day9-first条件 | 夫夫的开发小站</title>
+  <title>夫夫的开发小站</title>
   
 
 
@@ -144,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -217,9 +214,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -232,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/yuque/Day9-first条件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/yuque/Day1-Extension/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xlff">
@@ -249,7 +246,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day9-first条件</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/16/yuque/Day1-Extension/" itemprop="url">Day1-Extension</a></h1>
         
 
         <div class="post-meta">
@@ -261,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-20T01:41:08+00:00">
-                2019-02-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T01:38:49+00:00">
+                2019-01-16
               </time>
             
 
@@ -299,9 +298,12 @@
       
 
       
-        <h1 id="first-where"><a href="#first-where" class="headerlink" title="first(where:)"></a>first(where:)</h1><p>返回一个满足条件的值<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">first</span><span class="params">(<span class="keyword">where</span> predicate: <span class="params">(Value)</span></span></span> <span class="keyword">throws</span> -&gt; <span class="type">Bool</span>) <span class="keyword">rethrows</span> -&gt; <span class="type">Value</span>?</span><br></pre></td></tr></table></figure></p>
-<p>例子:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, -<span class="number">4</span>, -<span class="number">10</span>, <span class="number">20</span>, <span class="number">19</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> number = numbers.first(<span class="keyword">where</span>: &#123; $<span class="number">0</span> &lt; <span class="number">0</span> &#125;) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"数组中第一个小于0的数: \(number)"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 数组中第一个小于0的数: -4</span></span><br></pre></td></tr></table></figure></p>
+        
+          
+            <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIView</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">addSubviews</span><span class="params">(<span class="number">_</span> subviews: UIView...)</span></span> &#123;</span><br><span class="line">		subviews.forEach(addSubView)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向父视图中添加</span></span><br><span class="line">view.addSubviews(imageView, slider, view, label)</span><br></pre></td></tr></table></figure>
 
+          
+        
       
     </div>
     
@@ -318,32 +320,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/01/24/yuque/Day8-guard/" rel="next" title="Day8-guard">
-                <i class="fa fa-chevron-left"></i> Day8-guard
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/21/yuque/Day10-AllSatisfyFunction/" rel="prev" title="Day10-AllSatisfyFunction">
-                Day10-AllSatisfyFunction <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -353,11 +335,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -365,10 +350,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -389,17 +370,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -441,22 +413,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-where"><span class="nav-number">1.</span> <span class="nav-text">first(where:)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -590,10 +546,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
