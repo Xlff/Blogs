@@ -284,5 +284,31 @@
       "_serializer": "v2.user"
     },
     "body": "返回序列中的值是否都满足条件:\n```swift\n    public func allSatisfy(_ predicate: (Element) throws -> Bool) rethrows -> Bool\n```\n\n例子:\n\n```swift\nlet names = [\"Sofia\", \"Camilla\", \"Martina\", \"Mateo\", \"Nicolás\"]\nlet allHaveAtLeastFive = names.allSatisfy({ $0.count >= 5 })\n// allHaveAtLeastFive = true\n\nlet numbers = [2, 10, 15, 19, 8]\nlet allNumberLargeThanTen = numbers.allSatisfy({ $0 > 10 })\n// allNumberLargeThanTen = false\n```\n\n\n"
+  },
+  {
+    "title": "Day11-defer介绍",
+    "description": "defer用于延迟执行,在函数执行完成后再执行defer中的代码.例子:func simpleDefer() {     defer {         print(&quot;defer code&quot;)     }        print(&quot;other code&quot...",
+    "created_at": "2019-02-26T06:53:13.000Z",
+    "updated_at": "2019-02-26T07:05:32.000Z",
+    "published_at": "2019-02-26T07:05:32.000Z",
+    "format": "lake",
+    "slug": "klqg8s",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 1,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-02-19T01:20:38.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "defer用于延迟执行,在函数执行完成后再执行defer中的代码.<br />例子:\n\n```swift\nfunc simpleDefer() {\n    defer {\n        print(\"defer code\")\n    }   \n    print(\"other code\")\n}\nsimpleDefer()\n// other code\n// defer code\n```\n\n"
   }
 ]
