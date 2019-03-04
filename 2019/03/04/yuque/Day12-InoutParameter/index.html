@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="夫夫的开发小站">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数 123456789func x(depth: inout Int) &amp;#123;	depth += 1  if (depth &amp;lt; 10) &amp;#123;  	x(depth: &amp;amp;depth)  &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day12-InoutParameter">
+<meta property="og:url" content="http://yoursite.com/2019/03/04/yuque/Day12-InoutParameter/index.html">
 <meta property="og:site_name" content="夫夫的开发小站">
+<meta property="og:description" content="如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数 123456789func x(depth: inout Int) &amp;#123;	depth += 1  if (depth &amp;lt; 10) &amp;#123;  	x(depth: &amp;amp;depth)  &amp;#">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-04T02:06:30.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夫夫的开发小站">
+<meta name="twitter:title" content="Day12-InoutParameter">
+<meta name="twitter:description" content="如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数 123456789func x(depth: inout Int) &amp;#123;	depth += 1  if (depth &amp;lt; 10) &amp;#123;  	x(depth: &amp;amp;depth)  &amp;#">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/04/yuque/Day12-InoutParameter/">
 
 
 
 
 
-  <title>夫夫的开发小站</title>
+  <title>Day12-InoutParameter | 夫夫的开发小站</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -229,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/yuque/Day2-静态工厂方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/04/yuque/Day12-InoutParameter/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xlff">
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/yuque/Day2-静态工厂方法/" itemprop="url">Day2-静态工厂方法</a></h1>
+          <h1 class="post-title" itemprop="name headline">Day12-InoutParameter</h1>
         
 
         <div class="post-meta">
@@ -260,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T01:50:11+00:00">
-                2019-01-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-04T01:50:09+00:00">
+                2019-03-04
               </time>
             
 
@@ -298,12 +299,10 @@
       
 
       
-        
-          
-            <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UILabel</span> </span>&#123;</span><br><span class="line">    <span class="comment">//MARK: 标题静态工厂方法</span></span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">initForTitle</span><span class="params">()</span></span> -&gt; <span class="type">UILabel</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> label = <span class="type">UILabel</span>()</span><br><span class="line">        label.font = .boldSystemFont(ofSize: <span class="number">18</span>)</span><br><span class="line">        label.textColor = .darkGray</span><br><span class="line">        label.numberOfLines = <span class="number">1</span></span><br><span class="line">        label.adjustsFontSizeToFitWidth = <span class="literal">true</span></span><br><span class="line">        label.minimumScaleFactor = <span class="number">0.75</span></span><br><span class="line">        <span class="keyword">return</span> label</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//MARK: 副标题静态工厂方法</span></span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">initForDescription</span><span class="params">()</span></span> -&gt; <span class="type">UILabel</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> label = <span class="type">UILabel</span>()</span><br><span class="line">        label.font = .systemFont(ofSize: <span class="number">14</span>)</span><br><span class="line">        label.textColor = .black</span><br><span class="line">        label.numberOfLines = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> label</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ContentViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="built_in">lazy</span> <span class="keyword">var</span> titleLabel = <span class="type">UILabel</span>.initForTitle()</span><br><span class="line">    <span class="built_in">lazy</span> <span class="keyword">var</span> detailLabel = <span class="type">UILabel</span>.initForDescription()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.<br>例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">x</span><span class="params">(depth: <span class="keyword">inout</span> Int)</span></span> &#123;</span><br><span class="line">	depth += <span class="number">1</span></span><br><span class="line">  <span class="keyword">if</span> (depth &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  	x(depth: &amp;depth)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> depth = <span class="number">0</span></span><br><span class="line">x(depth: &amp;depth)</span><br><span class="line"><span class="built_in">print</span>(depth) <span class="comment">//10</span></span><br></pre></td></tr></table></figure>
+<p>注意: <br>inout修饰的参数不能是不可变参数(let)<br>调用的时候,必须使用&amp;符号, 指向原地址</p>
 
-          
-        
       
     </div>
     
@@ -320,132 +319,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/16/yuque/Day1-Extension/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xlff">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="夫夫的开发小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/16/yuque/Day1-Extension/" itemprop="url">Day1-Extension</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-16T01:38:49+00:00">
-                2019-01-16
-              </time>
+              <a href="/2019/02/26/yuque/Day11-defer介绍/" rel="next" title="Day11-defer介绍">
+                <i class="fa fa-chevron-left"></i> Day11-defer介绍
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIView</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">addSubviews</span><span class="params">(<span class="number">_</span> subviews: UIView...)</span></span> &#123;</span><br><span class="line">		subviews.forEach(addSubView)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向父视图中添加</span></span><br><span class="line">view.addSubviews(imageView, slider, view, label)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -455,14 +350,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -470,6 +362,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -666,6 +562,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
