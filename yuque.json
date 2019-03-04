@@ -310,5 +310,31 @@
       "_serializer": "v2.user"
     },
     "body": "defer用于延迟执行,在函数执行完成后再执行defer中的代码.<br />例子:\n\n```swift\nfunc simpleDefer() {\n    defer {\n        print(\"defer code\")\n    }   \n    print(\"other code\")\n}\nsimpleDefer()\n// other code\n// defer code\n```\n\n"
+  },
+  {
+    "title": "Day12-InoutParameter",
+    "description": "如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数func x(depth: inout Int) { \tdepth += 1   if (depth &l...",
+    "created_at": "2019-03-04T01:50:09.000Z",
+    "updated_at": "2019-03-04T02:04:25.000Z",
+    "published_at": "2019-03-04T02:04:25.000Z",
+    "format": "lake",
+    "slug": "irv4es",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 1,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-02-19T01:20:38.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.<br />例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数\n\n```swift\nfunc x(depth: inout Int) {\n\tdepth += 1\n  if (depth < 10) {\n  \tx(depth: &depth)\n  }\n}\nvar depth = 0\nx(depth: &depth)\nprint(depth) //10 \n```\n\n注意: <br />inout修饰的参数不能是不可变参数(let)<br />调用的时候,必须使用&符号, 指向原地址\n"
   }
 ]
