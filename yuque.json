@@ -336,5 +336,31 @@
       "_serializer": "v2.user"
     },
     "body": "如果想要一个函数修改参数的值,并且修改后的值保存到函数被调用完成.那么用in-out参数来代替这个参数.<br />例子:  有时复杂的问题可能需要用到递归,使用inout参数可以在许多递归中共享参数\n\n```swift\nfunc x(depth: inout Int) {\n\tdepth += 1\n  if (depth < 10) {\n  \tx(depth: &depth)\n  }\n}\nvar depth = 0\nx(depth: &depth)\nprint(depth) //10 \n```\n\n注意: <br />inout修饰的参数不能是不可变参数(let)<br />调用的时候,必须使用&符号, 指向原地址\n"
+  },
+  {
+    "title": "Day13-MapFuction",
+    "description": "func map&lt;T&gt;(_ transform: (Element) throws -&gt; T) rethrows -&gt; [T]将序列中的每一个元素都映射到一个新的数组中.例子:let cast = [&quot;Vivien&quot;, &quot;Max&quot;...",
+    "created_at": "2019-03-05T03:13:06.000Z",
+    "updated_at": "2019-03-05T03:41:10.000Z",
+    "published_at": "2019-03-05T03:41:10.000Z",
+    "format": "lake",
+    "slug": "pxf4tq",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 1,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-02-19T01:20:38.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "\n```swift\nfunc map<T>(_ transform: (Element) throws -> T) rethrows -> [T]\n```\n将序列中的每一个元素都映射到一个新的数组中.\n\n例子:\n\n```swift\nlet cast = [\"Vivien\", \"Max\", \"Xie\", \"Kim\"]\nlet lowercaseNames = cast.map { $0.lowercased() } // [\"vivien\", \"max\", \"xie\", \"kim\"]\nlet letterCounts = cast.map { $0.count )} // [6, 3, 3, 3]\n```\n\n对Optional值作变化和操作.\n\n```swift\npublic enum Optional<T>:\n\t\t_Reflectable, NilLiteralConvertible {\n      // 若果self为nil, 则返回nil. 否则返回f(self)\n      public func map<U>(@noescape f:(T) -> U) -> U?\n}\n\n```\n\n```swift\nlet num: Int? = 3\nlet result = num.map{ $0 * 2 } // Optional(6)\n```\n\n"
   }
 ]
