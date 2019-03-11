@@ -27,5 +27,5 @@ UIColor.init(r: 200, g: 100, b: 199, a: 0.5)
 UIColor.init(hex: 0x5fc7dc)
 ```
 
-![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)
+![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)
 

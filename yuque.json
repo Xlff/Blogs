@@ -23,7 +23,7 @@
       "updated_at": "2019-01-20T13:21:18.000Z",
       "_serializer": "v2.user"
     },
-    "body": "\n```swift\nextension UIColor {\n  \t// 重定义rgb\n    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {\n        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue: CGFloat(g) / 255.0, alpha: a)\n    }\n    convenience init(r: Int, g: Int, b: Int) {\n        self.init(r: r, g: g, b: b, a: 1.0)\n    }\n    // 使用十六进制\n    convenience init(hex: Int) {\n        self.init(r: (hex >> 16) & 0xff, g: (hex >> 8) & 0xff, b: hex & 0xff)\n    }\n}\n\nUIColor.init(r: 151, g: 151, b: 151)\nUIColor.init(r: 200, g: 100, b: 199, a: 0.5)\n\nUIColor.init(hex: 0x5fc7dc)\n```\n\n![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)\n"
+    "body": "\n```swift\nextension UIColor {\n  \t// 重定义rgb\n    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {\n        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue: CGFloat(g) / 255.0, alpha: a)\n    }\n    convenience init(r: Int, g: Int, b: Int) {\n        self.init(r: r, g: g, b: b, a: 1.0)\n    }\n    // 使用十六进制\n    convenience init(hex: Int) {\n        self.init(r: (hex >> 16) & 0xff, g: (hex >> 8) & 0xff, b: hex & 0xff)\n    }\n}\n\nUIColor.init(r: 151, g: 151, b: 151)\nUIColor.init(r: 200, g: 100, b: 199, a: 0.5)\n\nUIColor.init(hex: 0x5fc7dc)\n```\n\n![day3-1.jpg](https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746)\n"
   },
   {
     "title": "Day2-静态工厂方法",
@@ -362,5 +362,57 @@
       "_serializer": "v2.user"
     },
     "body": "\n```swift\nfunc map<T>(_ transform: (Element) throws -> T) rethrows -> [T]\n```\n将序列中的每一个元素都映射到一个新的数组中.\n\n例子:\n\n```swift\nlet cast = [\"Vivien\", \"Max\", \"Xie\", \"Kim\"]\nlet lowercaseNames = cast.map { $0.lowercased() } // [\"vivien\", \"max\", \"xie\", \"kim\"]\nlet letterCounts = cast.map { $0.count )} // [6, 3, 3, 3]\n```\n\n对Optional值作变化和操作.\n\n```swift\npublic enum Optional<T>:\n\t\t_Reflectable, NilLiteralConvertible {\n      // 若果self为nil, 则返回nil. 否则返回f(self)\n      public func map<U>(@noescape f:(T) -> U) -> U?\n}\n\n```\n\n```swift\nlet num: Int? = 3\nlet result = num.map{ $0 * 2 } // Optional(6)\n```\n\n"
+  },
+  {
+    "title": "Day15-PassingOperator",
+    "description": "将操作符号用作闭包传递let numbers = [5,1,52,25,14,6,33] let sorted = numbers.sorted(by: &gt;) print(sorted) // [52, 33, 25, 14, 6, 5, 1]",
+    "created_at": "2019-03-11T07:35:29.000Z",
+    "updated_at": "2019-03-11T07:39:59.000Z",
+    "published_at": "2019-03-11T07:39:59.000Z",
+    "format": "lake",
+    "slug": "scdz5w",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 1,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-02-19T01:20:38.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "将操作符号用作闭包传递\n\n```swift\nlet numbers = [5,1,52,25,14,6,33]\nlet sorted = numbers.sorted(by: >)\nprint(sorted)\n// [52, 33, 25, 14, 6, 5, 1]\n```\n\n"
+  },
+  {
+    "title": "Day14-CompactMapFunction",
+    "description": "Swift4.1 开始.当转换数组时， 使用compactmap(_:)可剔出nil值, 可省略解包过程。例子：let numbers = [&quot;5&quot;, &quot;42&quot;, &quot;nine&quot;, &quot;100&quot;, &quot;Bob&...",
+    "created_at": "2019-03-06T07:33:31.000Z",
+    "updated_at": "2019-03-11T07:35:14.000Z",
+    "published_at": "2019-03-11T07:35:14.000Z",
+    "format": "lake",
+    "slug": "wikf8m",
+    "last_editor": {
+      "id": 241566,
+      "type": "User",
+      "login": "wizzzard",
+      "name": "WiZzzard",
+      "description": null,
+      "avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg",
+      "large_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_320,h_320",
+      "medium_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_160,h_160",
+      "small_avatar_url": "https://cdn.nlark.com/yuque/0/2019/jpeg/anonymous/1547028467152-41342349-c3ad-4e09-abae-dd3e0e1b6a94.jpeg?x-oss-process=image/resize,m_fill,w_80,h_80",
+      "followers_count": 1,
+      "following_count": 3,
+      "created_at": "2019-01-09T10:08:09.000Z",
+      "updated_at": "2019-02-19T01:20:38.000Z",
+      "_serializer": "v2.user"
+    },
+    "body": "Swift4.1 开始.<br />当转换数组时， 使用compactmap(_:)可剔出nil值, 可省略解包过程。<br />例子：\n```swift\nlet numbers = [\"5\", \"42\", \"nine\", \"100\", \"Bob\"]\nlet mapResult = numbers.map({ Int($0) })\n\nlet compactResult = numbers.compactMap({ Int($0) })\n\nprint(mapResult)\n// [Optional(5), Optional(42), nil, Optional(100), nil]  返回的数组类型为[Int?]\nprint(compactResult)\n// [5, 42, 100]  返回的数组类型为[Int]\n```\n\n"
   }
 ]
