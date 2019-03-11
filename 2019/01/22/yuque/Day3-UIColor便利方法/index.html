@@ -86,12 +86,12 @@
 <meta property="og:site_name" content="夫夫的开发小站">
 <meta property="og:description" content="123456789101112131415161718extension UIColor &amp;#123;  	// 重定义rgb    convenience init(r: Int, g: Int, b: Int, a: CGFloat) &amp;#123;        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746">
-<meta property="og:updated_time" content="2019-03-05T03:44:03.717Z">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746">
+<meta property="og:updated_time" content="2019-03-11T08:11:38.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day3-UIColor便利方法">
 <meta name="twitter:description" content="123456789101112131415161718extension UIColor &amp;#123;  	// 重定义rgb    convenience init(r: Int, g: Int, b: Int, a: CGFloat) &amp;#123;        self.init(red: CGFloat(r) / 255.0, green: CGFloat(b) / 255.0, blue">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&linkTarget=_blank&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&display=inline&height=61&name=day3-1.jpg&originHeight=194&originWidth=2366&size=15104&width=746">
 
 
 
@@ -302,7 +302,7 @@
 
       
         <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIColor</span> </span>&#123;</span><br><span class="line">  	<span class="comment">// 重定义rgb</span></span><br><span class="line">    <span class="keyword">convenience</span> <span class="keyword">init</span>(r: <span class="type">Int</span>, g: <span class="type">Int</span>, b: <span class="type">Int</span>, a: <span class="type">CGFloat</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>(red: <span class="type">CGFloat</span>(r) / <span class="number">255.0</span>, green: <span class="type">CGFloat</span>(b) / <span class="number">255.0</span>, blue: <span class="type">CGFloat</span>(g) / <span class="number">255.0</span>, alpha: a)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">convenience</span> <span class="keyword">init</span>(r: <span class="type">Int</span>, g: <span class="type">Int</span>, b: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>(r: r, g: g, b: b, a: <span class="number">1.0</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 使用十六进制</span></span><br><span class="line">    <span class="keyword">convenience</span> <span class="keyword">init</span>(hex: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.<span class="keyword">init</span>(r: (hex &gt;&gt; <span class="number">16</span>) &amp; <span class="number">0xff</span>, g: (hex &gt;&gt; <span class="number">8</span>) &amp; <span class="number">0xff</span>, b: hex &amp; <span class="number">0xff</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">UIColor</span>.<span class="keyword">init</span>(r: <span class="number">151</span>, g: <span class="number">151</span>, b: <span class="number">151</span>)</span><br><span class="line"><span class="type">UIColor</span>.<span class="keyword">init</span>(r: <span class="number">200</span>, g: <span class="number">100</span>, b: <span class="number">199</span>, a: <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="type">UIColor</span>.<span class="keyword">init</span>(hex: <span class="number">0x5fc7dc</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&amp;display=inline&amp;height=61&amp;linkTarget=_blank&amp;name=day3-1.jpg&amp;originHeight=194&amp;originWidth=2366&amp;size=15104&amp;width=746" alt="day3-1.jpg"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/241566/1548124726816-f55bfed5-149e-4d4a-9cd1-896bede5f206.jpeg#align=left&amp;display=inline&amp;height=61&amp;name=day3-1.jpg&amp;originHeight=194&amp;originWidth=2366&amp;size=15104&amp;width=746" alt="day3-1.jpg"></p>
 
       
     </div>
@@ -407,7 +407,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
